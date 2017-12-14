@@ -115,14 +115,19 @@
             <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/12">12</a></h5>
         </div>
         <div>
-            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/ResumeAlarms/date/elements/{Element}</h3>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/ResumeAlarm/date/elements/{Element}</h3>
             <h5 style="padding-left:5em">Get hourly summarized information(min, max and average values) for a parameter on a specific day in all cities</h5>
-            <h5 style="padding-left:5em">Exempale api/ResumeAlarms/date/elements/O3?date=2017-11-19T08:15</h5>
+            <h5 style="padding-left:5em">Exemple <a href="http://airmonit-2.apphb.com/api/ResumeAlarm/date/elements/O3?date=2017-11-19T08:15">/api/ResumeAlarm/date/elements/O3?date=2017-11-19T08:15</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/resumes/days/{date}/elements/{Element}/cities/{City}</h3>
             <h5 style="padding-left:5em">Get hourly summarized information(min, max and average values) for a parameter on a specific day in a city specified by the user</h5>
         </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/ResumeAlarm/date/elements/{Element}/cities/{City}</h3>
+            <h5 style="padding-left:5em">Get daily summarized information(min, max and average values) for a parameter   on a   specific threshold(between two dates/time) in a city specified by the user or all cities;</h5>
+            <h5 style="padding-left:5em">Exemple <a href="http://airmonit-2.apphb.com/api/ResumeAlarm/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">api/ResumeAlarm/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
+        </div>     
     </div>
     <script src="jquery-3.2.1.min.js"></script>
      <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->

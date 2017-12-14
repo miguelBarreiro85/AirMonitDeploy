@@ -19,8 +19,8 @@
             alert("Data inicial deve ser menor que a data final ");
         } else {
             var jsonForm = { form: $("#dailyForm").serialize() };
-            console.log("/api/dailyResume/" + $("#bElem").val() + "/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val());
-            $.get("/api/dailyResume/" + $("#bElem").val() + "/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val(), (data, status) => {
+            console.log("/api/resumes/" + $("#bElem").val() + "/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val());
+            $.get("/api/resumeAlarm/date/elements/" + $("#bElem").val() + "/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val(), (data, status) => {
                 console.log(JSON.stringify(data));
                 $("#DivBody").html("");
                 var html = '<table class="table"><thead>';
