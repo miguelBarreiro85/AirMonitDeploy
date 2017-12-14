@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#getAllEntries").click(() => {
-        getAirEntries("", "/api/All");
+        getAirEntries("", "/api/AirEntries");
     });
     $("#airEntryLeiria").click(() => {
         getAirEntries("Leiria", "/api/city/");
