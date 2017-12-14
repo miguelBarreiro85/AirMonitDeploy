@@ -20,7 +20,7 @@
         } else {
             var jsonForm = { form: $("#dailyForm").serialize() };
             console.log("/api/resumes/" + $("#bElem").val() + "/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val());
-            $.get("/api/resumeAlarm/date/elements/" + $("#bElem").val() + "/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val(), (data, status) => {
+            $.get("/api/resumeAlarm/date/elements/" + $("#bElem").val() + "/cities/" + $("#bCity").val() + "?dateIn=" + $("#bstartDate").val() + "&dateOut=" + $("#bendDate").val(), (data, status) => {
                 console.log(JSON.stringify(data));
                 $("#DivBody").html("");
                 var html = '<table class="table"><thead>';
