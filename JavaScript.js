@@ -3,16 +3,16 @@
         getAirEntries("", "/api/AirEntries");
     });
     $("#airEntryLeiria").click(() => {
-        getAirEntries("Leiria", "/api/city/");
+        getAirEntries("Leiria", "/api/AirEntry/cities/");
     });
     $("#airEntryPorto").click(() => {
-        getAirEntries("Porto", "/api/city/");
+        getAirEntries("Porto", "//api/AirEntry/cities/");
     });
     $("#airEntryCoimbra").click(() => {
-        getAirEntries("Coimbra", "/api/city/");
+        getAirEntries("Coimbra", "/api/AirEntry/cities/");
     });
     $("#airEntryLisboa").click(() => {
-        getAirEntries("Lisboa", "/api/city/");
+        getAirEntries("Lisboa", "/api/AirEntry/cities/");
     });
     $("#bSubmit").click(() => {
         if ($("#bstartDate").val() > $("#bendDate").val()) {
