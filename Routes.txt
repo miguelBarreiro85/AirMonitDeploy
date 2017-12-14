@@ -1,0 +1,63 @@
+﻿Éstas são as rotas disponíveis:
+
+Base: 
+temos 4 tipos de dados a serem devolvidos:
+	AirEntry - é uma linha da tabela AirEntry (é devolvido o conjunto de linhas selecionados na query)
+	Alarm - é uma linha da tabela Alarm (é devolvido o conjunto de linhas selecionados na query)
+	string - na [Route("api/cities")] é devolvida uma lista de strings com as cidades
+	Sensors - uma linha constituida por 2 colunas (int id do sensor, sting location com a cidade de onde é esse sensor)
+
+
+
+[Route("api/AirEntry")] - Dá todas as linhas da tabela AirEntry - funciona
+[Route("api/Alarms")] - Dá todas as linhas da tabela Alarm - funciona
+[Route("api/cities")] - mostra as cidades - funciona
+[Route("api/AirEntry/cities/{city}")] - mostra as airEntry de uma cidade - funciona
+
+[Route("api/Sensors")] - /mostra os sensores e as cidades- não está implementado preciso do obj(int, string)
+[Route("api/AirEntry/Sensors/{id:int}")] - Obter a leitura de 1 sensor - funciona
+
+
+Alíneas do Enunciado:
+1) Get hourly  summarized information(min, max and average values) for	a parameter   on a   specific day,    in	a city    specified by  the user    or all cities;
+[Route("api/ResumeAlarm/days/{date}/elements/{Element}")] - o resumo por hora de um dia e um elemento
+
+[Route("api/ResumeAlarm/days/{date}/elements/{Element}/cities/{City}")]  - /obtem todas o resumo por hora de um elemento numa cidade
+
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+
+2) Get daily   summarized information(min, max and average values) for	a parameter   on a   specific threshold(between two dates/time) in	a city    specified by  the user    or all cities;
+	        [Route("api/resume/Date1/{dateB}/Date2/{dateE}/elements/{Element}")] - Sem cidade específica
+
+	[Route("api/resumes/{date}/{Element}/{City}")] - Escolhendo uma cidade específica
+
+3) Get daily   alarms information by city
+	[Route("api/resumeAlarm")] - Obter os alarmes por dia numa cidade
+
+
+***********************A Soraia precisa de ***********************************************************
+uma rota para devolver os ALARMES numa cidade específica
+
+[Route("api/alarmResume/{Element}/{City}")]
+
+uma rota para devolver os ALARMES despoltados entre 2 datas específicas
+[Route("api/alarms/{dateB}/{dateE}")]
+
+uma rota para devolver os alarmes despoltados numa cidade específica E entre 2 datas específicas
+[Route("api/alarms/date1/{dateB}/date2/{dateE}/cities/{City}")]
+
+
+
+********************************************************
+
+ [Route("api/alarmResume/{dateB}/{dateE}/{Element}/{City}")] - //Vai buscar todas os alarmes entre duas datas numa determinada cidade e para um determinado elemento
+
+
+ [Route("api/newAlarm")] - Inserir um novo alarme (confirmar)
+
+
+ [Route("api/resumes/days/{date}/elements/{Element}/cities/{City}")]  //obtem todas o resumo por hora de um elemento numa cidade
