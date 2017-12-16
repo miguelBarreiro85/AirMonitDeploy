@@ -90,7 +90,7 @@
             <h5 style="padding-left:5em">Get the sensors id and respectives cities</h5>
         </div>
         <div>
-            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span> api/sensors/{id:int}</h3>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span> api/AirEntries/Sensors/{id:int}</h3>
             <h5 style="padding-left:5em">Get the air entries sent by specified sensor id</h5>
             <h5 style="padding-left:5em">Example: <a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/1">http://airmonit-2.apphb.com/api/AirEntries/Sensors/1</a></h5>
         </div>
@@ -114,34 +114,28 @@
         <h6 style="text-align:center"><a href="#AirEntries">Go to Air Entries Section</a></h6>
         <h6 style="text-align:center"><a href="#usersalarms">Go to Users Alarms Section</a></h6>
         <div>
-            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms</h3>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span><a href="http://airmonit-2.apphb.com/api/Alarms">api/Alarms</a></h3>
             <h5 style="padding-left:5em">Get all alarms</h5>
-            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/Alarms"></a></h5>
-        </div>    
-        <div>
-            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms</h3>
-            <h5 style="padding-left:5em">Get all alarms</h5>
-            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/Alarms"></a></h5>
-        </div>  
+        </div>      
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/cities/{city}</h3>
             <h5 style="padding-left:5em">Get all alarms on a given city</h5>
-            <h5 style="padding-left:5em">api/Alarms/cities/Leiria</h5>
+            <h5 style="padding-left:5em">Example: <a href="http://airmonit-2.apphb.com/api/Alarms/cities/Leiria">http://airmonit-2.apphb.com/api/Alarms/cities/Leiria</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/dates</h3>
             <h5 style="padding-left:5em">Get all alarms between two dates</h5>
-            <h5 style="padding-left:5em">Example: api/Alarms/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</h5>
+            <h5 style="padding-left:5em">Example: <a href="http://airmonit-2.apphb.com/api/Alarms/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">http://airmonit-2.apphb.com/api/Alarms/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/dates/cities/{City}</h3>
             <h5 style="padding-left:5em">Get Alarms resume between two dates on a given city</h5>
-            <h5 style="padding-left:5em">Example: api/Alarms/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</h5>
+            <h5 style="padding-left:5em">Example: <a href="http://airmonit-2.apphb.com/api/Alarms/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">http://airmonit-2.apphb.com/api/Alarms/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/dates/elements/{Element}/cities/{City}</h3>
             <h5 style="padding-left:5em">Get all alarms on a given city for a given element between two dates</h5>
-            <h5 style="padding-left:5em">Example: api/Alarms/dates/elements/{Element}/cities/{City}?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/Alarms/dates/elements/CO2/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">http://airmonit-2.apphb.com/api/Alarms/dates/elements/CO2/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
         </div>
         <hr>
         <h1 style="text-align:center" id="usersalarms">User Alarms Section</h1>
@@ -153,23 +147,23 @@
             <h5 style="padding-left:5em">Example, HTTP method POST: api/newAlarm HTTP Body: {"UserID" : 1, "Event" : "Fogo", "Temperature" : "200", "City" : "Leiria", "Date":"2017-11-18T23:08"}</h5>
         </div>
         <div>
-            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries</h3>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span><a href="http://airmonit-2.apphb.com/api/userEntries">api/userEntries</a></h3>
             <h5 style="padding-left:5em">Get All User Entries</h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries/cities/{city}</h3>
             <h5 style="padding-left:5em">Get User Entries on a given city</h5>
-            <h5 style="padding-left:5em">Example: api/userEntries/cities/Leiria</h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/userEntries/cities/Leiria">http://airmonit-2.apphb.com/api/userEntries/cities/Leiria</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries/dates/cities/{City}</h3>
             <h5 style="padding-left:5em">Get User Entries on a given city between two given dates</h5>
-            <h5 style="padding-left:5em">Example: api/userEntries/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08 </h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/userEntries/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">http://airmonit-2.apphb.com/api/userEntries/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries/dates</h3>
             <h5 style="padding-left:5em">Get User Entries between two given dates</h5>
-            <h5 style="padding-left:5em">Example: api/userEntries/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08 </h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/userEntries/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">http://airmonit-2.apphb.com/api/userEntries/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
         </div>
     </div>
     <script src="jquery-3.2.1.min.js"></script>
