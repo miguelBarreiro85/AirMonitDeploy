@@ -12,19 +12,13 @@
 
 <body style="font-family:Verdana;">
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="#">Air Monitor</a>
+        <a class="navbar-brand" href="http://airmonit-2.apphb.com/">Air Monitor</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" id="getAllAlarms">Get Air Alarms <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Get Air Entries
@@ -36,9 +30,6 @@
                         <a class="dropdown-item" id="airEntryPorto" href="#">Porto</a>
                         <a class="dropdown-item" id="airEntryLisboa" href="#">Lisboa</a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
         </div>
@@ -78,6 +69,9 @@
     </div>
     
     <div class="table-responsive" id="DivBody">
+        <h1 style="text-align:center" id="AirEntries">Air Entries Section</h1>
+        <h6 style="text-align:center"><a href="#alarms">Go to Alarms section</a></h6>
+        <h6 style="text-align:center"><a href="#usersalarms">Go to Users Alarms Section</a></h6>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span><a href="http://airmonit-2.apphb.com/api/AirEntries">api/AirEntries</a></h3>
             <h5 style="padding-left:5em">Get all Air Entries from sensors</h5>
@@ -88,11 +82,8 @@
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/AirEntry/cities/{city}</h3>
-            <h5 style="padding-left:5em">Get all air entrie from specified city</h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/cities/Coimbra">Coimbra</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/cities/Leiria">Leiria</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/cities/Lisboa">Lisboa</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/AirEntries/cities/Porto">Porto</a></h5>
+            <h5 style="padding-left:5em">Get all air entries for the given city</h5>
+            <h5 style="padding-left:5em">Example:<a href="http://airmonit-2.apphb.com/api/AirEntries/cities/Coimbra">http://airmonit-2.apphb.com/api/AirEntries/cities/Coimbra </a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span><a href="http://airmonit-2.apphb.com/api/sensors">api/sensors</a></h3>
@@ -101,33 +92,85 @@
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span> api/sensors/{id:int}</h3>
             <h5 style="padding-left:5em">Get the air entries sent by specified sensor id</h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/1">1</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/2">2</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/3">3</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/4">4</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/5">5</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/6">6</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/7">7</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/8">8</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/9">9</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/10">10</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/11">11</a></h5>
-            <h5 style="padding-left:5em"><a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/12">12</a></h5>
+            <h5 style="padding-left:5em">Example: <a href="http://airmonit-2.apphb.com/api/AirEntries/Sensors/1">http://airmonit-2.apphb.com/api/AirEntries/Sensors/1</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/ResumeAlarm/date/elements/{Element}</h3>
             <h5 style="padding-left:5em">Get hourly summarized information(min, max and average values) for a parameter on a specific day in all cities</h5>
-            <h5 style="padding-left:5em">Exemple <a href="http://airmonit-2.apphb.com/api/ResumeAlarm/date/elements/O3?date=2017-11-19T08:15">/api/ResumeAlarm/date/elements/O3?date=2017-11-19T08:15</a></h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/ResumeAlarms/date/elements/O3?date=2017-11-19T08:15">/api/ResumeAlarm/date/elements/O3?date=2017-11-19T08:15</a></h5>
         </div>
         <div>
-            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/resumes/days/{date}/elements/{Element}/cities/{City}</h3>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/ResumeAlarms/date/elements/{Element}/cities/{City}</h3>
             <h5 style="padding-left:5em">Get hourly summarized information(min, max and average values) for a parameter on a specific day in a city specified by the user</h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/ResumeAlarms/date/elements/O3/cities/Leiria?date=2017-11-22T23:08">api/ResumeAlarm/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
         </div>
         <div>
             <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/ResumeAlarm/date/elements/{Element}/cities/{City}</h3>
             <h5 style="padding-left:5em">Get daily summarized information(min, max and average values) for a parameter   on a   specific threshold(between two dates/time) in a city specified by the user or all cities;</h5>
-            <h5 style="padding-left:5em">Exemple <a href="http://airmonit-2.apphb.com/api/ResumeAlarm/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">api/ResumeAlarm/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
-        </div>     
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/ResumeAlarms/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08">api/ResumeAlarm/date/elements/O3/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</a></h5>
+        </div>
+        <hr>
+        <h1 style="text-align:center" id="alarms">Alarms Section</h1>
+        <h6 style="text-align:center"><a href="#AirEntries">Go to Air Entries Section</a></h6>
+        <h6 style="text-align:center"><a href="#usersalarms">Go to Users Alarms Section</a></h6>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms</h3>
+            <h5 style="padding-left:5em">Get all alarms</h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/Alarms"></a></h5>
+        </div>    
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms</h3>
+            <h5 style="padding-left:5em">Get all alarms</h5>
+            <h5 style="padding-left:5em">Example <a href="http://airmonit-2.apphb.com/api/Alarms"></a></h5>
+        </div>  
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/cities/{city}</h3>
+            <h5 style="padding-left:5em">Get all alarms on a given city</h5>
+            <h5 style="padding-left:5em">api/Alarms/cities/Leiria</h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/dates</h3>
+            <h5 style="padding-left:5em">Get all alarms between two dates</h5>
+            <h5 style="padding-left:5em">Example: api/Alarms/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/dates/cities/{City}</h3>
+            <h5 style="padding-left:5em">Get Alarms resume between two dates on a given city</h5>
+            <h5 style="padding-left:5em">Example: api/Alarms/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/Alarms/dates/elements/{Element}/cities/{City}</h3>
+            <h5 style="padding-left:5em">Get all alarms on a given city for a given element between two dates</h5>
+            <h5 style="padding-left:5em">Example: api/Alarms/dates/elements/{Element}/cities/{City}?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08</h5>
+        </div>
+        <hr>
+        <h1 style="text-align:center" id="usersalarms">User Alarms Section</h1>
+        <h6 style="text-align:center"><a href="#AirEntries">Go to Air Entries Section</a></h6>
+        <h6 style="text-align:center"><a href="#alarms">Go to Alarms Section</a></h6>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/newAlarm</h3>
+            <h5 style="padding-left:5em">Permit users to post a new alarm</h5>
+            <h5 style="padding-left:5em">Example, HTTP method POST: api/newAlarm HTTP Body: {"UserID" : 1, "Event" : "Fogo", "Temperature" : "200", "City" : "Leiria", "Date":"2017-11-18T23:08"}</h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries</h3>
+            <h5 style="padding-left:5em">Get All User Entries</h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries/cities/{city}</h3>
+            <h5 style="padding-left:5em">Get User Entries on a given city</h5>
+            <h5 style="padding-left:5em">Example: api/userEntries/cities/Leiria</h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries/dates/cities/{City}</h3>
+            <h5 style="padding-left:5em">Get User Entries on a given city between two given dates</h5>
+            <h5 style="padding-left:5em">Example: api/userEntries/dates/cities/Leiria?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08 </h5>
+        </div>
+        <div>
+            <h3 style="padding-left:1em"><span class="glyphicon glyphicon-arrow-right"></span>api/userEntries/dates</h3>
+            <h5 style="padding-left:5em">Get User Entries between two given dates</h5>
+            <h5 style="padding-left:5em">Example: api/userEntries/dates?dateIn=2017-11-18T23:08&dateOut=2017-11-22T23:08 </h5>
+        </div>
     </div>
     <script src="jquery-3.2.1.min.js"></script>
      <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
