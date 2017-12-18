@@ -36,7 +36,7 @@
                     html += '<td>' + data[i]["Max"] + '</td>';
                     html += '<td >' + data[i]["Min"] + '</td>';
                     html += '<td>' + data[i]["Avg"] + '</td>';
-                    html += '<td>' + data[i]["City"] + '</td>';
+                    html += '<td>' + data[i]["Location"] + '</td>';
                     html += '<td>' + data[i]["Date"] + '</td>';
                     html += "</tr>";
                 }
